@@ -1,1 +1,2 @@
-# zaplatynsky_ihor_labs
+# Repositorie for labs 
+Zaplatynsky Ihor ІР-13
