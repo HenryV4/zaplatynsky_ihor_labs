@@ -20,7 +20,10 @@ class TestAggressiveCows(unittest.TestCase):
         root.left.left.left = BinaryTree(8)
         root.left.left.left.left = BinaryTree(9)
         self.assertEqual(binary_tree_diameter(root), 6)
-
+    def test_max_diameter_in_bt_3(self):
+        root = None
+        self.assertEqual(binary_tree_diameter(root), 0)
+        
 if __name__ == '__main__':
     unittest.main()
 
