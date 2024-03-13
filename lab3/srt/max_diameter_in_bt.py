@@ -20,5 +20,6 @@ def binary_tree_diameter(root: BinaryTree):
     right_height = height(root.right)
     left_diameter = binary_tree_diameter(root.left)
     right_diameter = binary_tree_diameter(root.right)
-    return max(left_height + right_height + 2, left_diameter, right_diameter)
+    trough_the_root = left_height + right_height + 2
+    return max(trough_the_root, left_diameter, right_diameter)
 
