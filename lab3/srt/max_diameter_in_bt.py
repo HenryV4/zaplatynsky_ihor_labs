@@ -8,9 +8,10 @@ class BinaryTree:
 
 def binary_tree_diameter(root: BinaryTree):
     def height(el):
+        null_el = -1
         if not el:
-            return -1
-        return 1+ max(height(el.left), height(el.right))
+            return null_el
+        return 1 + max(height(el.left), height(el.right))
 
     if not root:
         return 0
