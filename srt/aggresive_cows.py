@@ -1,3 +1,5 @@
+
+
 def can_place_cow(stalls, cows, dist):
     n = len(stalls)
     cound_cows = 1
