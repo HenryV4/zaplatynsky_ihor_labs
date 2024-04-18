@@ -1,7 +1,8 @@
 import unittest
-import sys
-sys.path.append('C:/WORK/PROG/2/lab2/srt')
-from aggresive_cows import aggresive_cows
+# import sys
+# sys.path.append('C:/WORK/PROG/2/lab2/srt')
+# from aggresive_cows import aggresive_cows
+from src.aggresive_cows import aggresive_cows
 
 class TestAggressiveCows(unittest.TestCase):
     def test_aggressive_cows_1(self):
