@@ -1,6 +1,6 @@
 import unittest
 import sys
-sys.path.append('C:/WORK/PROG/2/lab3/srt')
+sys.path.append('C:/projects/zaplatynsky_ihor_labs/src')
 from max_diameter_in_bt import BinaryTree, binary_tree_diameter
 
 class TestAggressiveCows(unittest.TestCase):
