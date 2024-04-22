@@ -1,6 +1,6 @@
 import unittest
 import sys
-sys.path.append('C:/WORK/PROG/2/lab/src')
+sys.path.append('C:/projects/zaplatynsky_ihor_labs/src')
 from penguins_city_gas import check_gas_delivery
 
 class TestAggressiveCows(unittest.TestCase):
