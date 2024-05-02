@@ -14,7 +14,8 @@ def check_gas_delivery(cities_list, storages_list, pipe_list):
         graph[source].append(destination)
 
     visited = set()
-    dfs(graph, storages_list[0], visited)
+    for storage in storages_list:
+        dfs(graph, storage, visited)
 
     unreachable_cities = [city for city in cities_list if city not in visited]
 
@@ -27,5 +28,4 @@ cities = ["Lviv", "Kyiv", "Rivne", "Dnipro", "Odesa"]
 storages = ["Storage_1", "Storage_2"]
 pipelines = [["Storage_1", "Lviv"], ["Lviv", "Rivne"], ["Lviv", "Kyiv"], ["Lviv", "Odesa"]]
 print(check_gas_delivery(cities, storages, pipelines))
-
 """
