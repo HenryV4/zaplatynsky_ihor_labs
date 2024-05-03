@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-source = "Source"
-final = "Final"
+SOURCE = "Source"
+FINAL = "Final"
 
 
 def dfs(graph, vertex, final, visited, parent):
@@ -79,7 +79,7 @@ def read_file(filename):
         tuple: A tuple containing lists of farms and stores, and a dictionary representing the graph
     """
     graph = defaultdict(dict)
-    with open(filename, "r") as file:
+    with open(filename, "r", encoding='utf-8') as file:
         lines = file.readlines()
         farms = lines[0].strip().split(",")
         stores = lines[1].strip().split(",")
@@ -96,7 +96,7 @@ def write_output(max_cars, file_name):
         max_cars (int): The maximum number of cars
         file_name (str): The name of the output file
     """
-    with open(file_name, "w") as file:
+    with open(file_name, "w", encoding='utf-8') as file:
         file.write(str(max_cars))
 
 
@@ -112,9 +112,9 @@ def calculate_max_flow(filename):
     farms, stores, graph = read_file(filename)
 
     for farm in farms:
-        graph[source][farm] = float("inf")
+        graph[SOURCE][farm] = float("inf")
     for shop in stores:
-        graph[shop][final] = float("inf")
+        graph[shop][FINAL] = float("inf")
 
-    max_flow = ford_fulkerson(graph, source, final)
+    max_flow = ford_fulkerson(graph, SOURCE, FINAL)
     return max_flow
