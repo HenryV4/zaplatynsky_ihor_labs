@@ -1,5 +1,3 @@
-
-
 def can_place_cow(stalls, cows, dist):
     n = len(stalls)
     cound_cows = 1
@@ -8,15 +6,16 @@ def can_place_cow(stalls, cows, dist):
         if stalls[i] - last >= dist:
             cound_cows += 1
             last = stalls[i]
-        if  cound_cows >= cows:
+        if cound_cows >= cows:
             return True
     return False
+
 
 def aggresive_cows(stalls, cows):
     n = len(stalls)
     stalls.sort()
     low = 1
-    high = stalls[n-1] - stalls[0]
+    high = stalls[n - 1] - stalls[0]
     while low <= high:
         mid = (low + high) // 2
         if can_place_cow(stalls, cows, mid):
@@ -24,4 +23,3 @@ def aggresive_cows(stalls, cows):
         else:
             high = mid - 1
     return high
-

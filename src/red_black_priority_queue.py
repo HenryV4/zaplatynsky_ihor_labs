@@ -9,7 +9,6 @@ class Node:
 
 
 class RedBlackPriorityQueue:
-
     def __init__(self):
         self.root = None
 
@@ -79,7 +78,7 @@ class RedBlackPriorityQueue:
             new_node.parent.parent.red = True
             self.left_rotate(new_node.parent.parent)
         return new_node
-    
+
     def left_rotate(self, x):
         y = x.right
         x.right = y.left
@@ -110,7 +109,6 @@ class RedBlackPriorityQueue:
         y.right = x
         x.parent = y
 
-
     def delete_max(self):
         if not self.root:
             return None
@@ -134,7 +132,6 @@ class RedBlackPriorityQueue:
         else:
             return self.delete_black_node(max_node)
 
-    
     def delete_black_node(self, max_node):
         if max_node.left and max_node.left.red:
             max_node.parent.right = max_node.left
@@ -150,7 +147,7 @@ class RedBlackPriorityQueue:
             self.fix_deletion(max_node)
 
         return max_node.value
-    
+
     def fix_deletion(self, node):
         while node != self.root and (node is not None and node.red == False):
             if node == node.parent.left:
@@ -158,7 +155,7 @@ class RedBlackPriorityQueue:
             else:
                 node = self.fix_deletion_right(node)
         self.root.red = False
-    
+
     def fix_deletion_left(self, node):
         sibling = node.parent.right
         if sibling and sibling.red == True:
@@ -175,14 +172,14 @@ class RedBlackPriorityQueue:
         else:
             node = self.fix_deletion_left_case_2(node, sibling)
         return node
-    
+
     def fix_deletion_left_case_2(self, node, sibling):
         if sibling.right is None or sibling.right.red == False:
             sibling.left.red = False
             sibling.red = True
             self.right_rotate(sibling)
             sibling = node.parent.right
-        
+
         sibling.red = node.parent.red
         node.parent.red = False
         if sibling.right:
@@ -190,7 +187,7 @@ class RedBlackPriorityQueue:
             self.right_rotate(node.parent)
             node = self.root
         return self.root
-    
+
     def fix_deletion_right(self, node):
         sibling = node.parent.left
         if sibling and sibling.red == True:
@@ -198,7 +195,7 @@ class RedBlackPriorityQueue:
             node.parent.red = True
             self.right_rotate(node.parent)
             sibling = node.parent.left
-        
+
         right_black = sibling.right is None or sibling.right.red == False
         left_black = sibling.left is None or sibling.left.red == False
 
@@ -208,7 +205,7 @@ class RedBlackPriorityQueue:
         else:
             node = self.fix_deletion_right_case_2(node, sibling)
         return node
-    
+
     def fix_deletion_right_case_2(self, node, sibling):
         if sibling.left is None or sibling.left.red == False:
             sibling.right.red = False
@@ -221,15 +218,15 @@ class RedBlackPriorityQueue:
             sibling.left.red = False
             self.right_rotate(node.parent)
             node = self.root
-    
-    def print_tree(self, node, level=0, prefix=''):
+
+    def print_tree(self, node, level=0, prefix=""):
         if node and node.red == True:
-            color = 'RED'
+            color = "RED"
         else:
-            color = 'BLACK'
+            color = "BLACK"
         if node is not None:
             if node.right is not Node:
-                self.print_tree(node.right, level + 1, '┌───')
-            print(' ' * (level * 4) + prefix + f"{node.value} {color} {node.priority}*")
+                self.print_tree(node.right, level + 1, "┌───")
+            print(" " * (level * 4) + prefix + f"{node.value} {color} {node.priority}*")
             if node.left is not None:
-                self.print_tree(node.left, level + 1, '└───')
+                self.print_tree(node.left, level + 1, "└───")

@@ -1,11 +1,11 @@
 import unittest
 import sys
-sys.path.append('C:/projects/zaplatynsky_ihor_labs/src')
+
+sys.path.append("C:/projects/zaplatynsky_ihor_labs/src")
 from red_black_priority_queue import RedBlackPriorityQueue
 
 
 class TestRedBlackPriorityQueue(unittest.TestCase):
-
     def test_priority_queue(self):
         pq = RedBlackPriorityQueue()
         pq.insert(1, 10)
@@ -29,7 +29,5 @@ class TestRedBlackPriorityQueue(unittest.TestCase):
         self.assertEqual(pq.delete_max(), 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

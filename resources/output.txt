@@ -1,0 +1,4 @@
+G, X, X, G, G
+G, G, X, X, G
+G, G, G, G, G
+G, G, G, G, G
