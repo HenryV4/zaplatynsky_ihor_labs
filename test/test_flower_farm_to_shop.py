@@ -6,14 +6,14 @@ class TestMaxFlow(unittest.TestCase):
     def test_max_flow_1(self):
         expected_max_flow = 51
         actual_max_flow = calculate_max_flow(
-            "C:/projects/zaplatynsky_ihor_labs/resources/roads.csv"
+            "resources/roads.csv"
         )
         self.assertEqual(actual_max_flow, expected_max_flow)
 
     def test_max_flow_2(self):
         expected_max_flow = 0
         actual_max_flow = calculate_max_flow(
-            "C:/projects/zaplatynsky_ihor_labs/resources/roads_no_way.csv"
+            "resources/roads_no_way.csv"
         )
         self.assertEqual(actual_max_flow, expected_max_flow)
 
