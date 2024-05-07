@@ -1,8 +1,6 @@
 import unittest
-import sys
 
-sys.path.append("C:/projects/zaplatynsky_ihor_labs/src")
-from red_black_priority_queue import RedBlackPriorityQueue
+from src.red_black_priority_queue import RedBlackPriorityQueue
 
 
 class TestRedBlackPriorityQueue(unittest.TestCase):

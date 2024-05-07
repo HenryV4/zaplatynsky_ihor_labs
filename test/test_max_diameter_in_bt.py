@@ -1,8 +1,5 @@
 import unittest
-import sys
-
-sys.path.append("C:/projects/zaplatynsky_ihor_labs/src")
-from max_diameter_in_bt import BinaryTree, binary_tree_diameter
+from src.max_diameter_in_bt import BinaryTree, binary_tree_diameter
 
 
 class TestAggressiveCows(unittest.TestCase):
@@ -28,7 +25,7 @@ class TestAggressiveCows(unittest.TestCase):
         root = None
         self.assertEqual(binary_tree_diameter(root), 0)
 
-    def test_max_diameter_in_bt_3(self):
+    def test_max_diameter_in_bt_4(self):
         root = BinaryTree(90)
         root.right = BinaryTree(100)
         root.left = BinaryTree(80)

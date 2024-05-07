@@ -1,8 +1,5 @@
 import unittest
-import sys
-
-sys.path.append("C:/projects/zaplatynsky_ihor_labs/src")
-from peak import find_the_longest_peak
+from src.peak import find_the_longest_peak
 
 
 class TestPeak(unittest.TestCase):

@@ -1,8 +1,5 @@
 import unittest
-import sys
-
-sys.path.append("C:/projects/zaplatynsky_ihor_labs/src")
-from flower_farm_to_shop import calculate_max_flow
+from src.flower_farm_to_shop import calculate_max_flow
 
 
 class TestMaxFlow(unittest.TestCase):
