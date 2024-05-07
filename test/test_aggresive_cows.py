@@ -1,6 +1,4 @@
-import sys
 import unittest
-
 from src.aggresive_cows import aggresive_cows
 
 
