@@ -30,5 +30,3 @@ def find_the_longest_peak(arr):
     return longest_peak_sequence
 
 
-arr = [4, 5, 3, 5, 6, 7, 4, 3, 10, 1, 6, 8, 10, 3, 3, 5, 7, 4, 3, 8, 3]
-print(find_the_longest_peak(arr))

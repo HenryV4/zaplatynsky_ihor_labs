@@ -21,11 +21,4 @@ def check_gas_delivery(cities_list, storages_list, pipe_list):
     return unreachable_cities
 
 
-"""
-usage example:
 
-cities = ["Lviv", "Kyiv", "Rivne", "Dnipro", "Odesa"]
-storages = ["Storage_1", "Storage_2"]
-pipelines = [["Storage_1", "Lviv"], ["Lviv", "Rivne"], ["Lviv", "Kyiv"], ["Lviv", "Odesa"]]
-print(check_gas_delivery(cities, storages, pipelines))
-"""
