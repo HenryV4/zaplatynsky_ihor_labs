@@ -28,5 +28,3 @@ def find_the_longest_peak(arr):
         el_pos += 1
 
     return longest_peak_sequence
-
-

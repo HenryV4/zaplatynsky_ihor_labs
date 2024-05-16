@@ -4,8 +4,6 @@ from src.trie import Trie
 
 class TestTrie(unittest.TestCase):
 
-
-    
     def test_insert_and_search(self):
         self.trie = Trie()
         self.trie.insert("apple")
@@ -29,5 +27,6 @@ class TestTrie(unittest.TestCase):
         self.assertTrue(self.trie.starts_with("grap"))
         self.assertFalse(self.trie.starts_with("oranee"))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

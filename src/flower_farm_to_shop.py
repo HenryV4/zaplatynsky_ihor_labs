@@ -79,7 +79,7 @@ def read_file(filename):
         tuple: A tuple containing lists of farms and stores, and a dictionary representing the graph
     """
     graph = defaultdict(dict)
-    with open(filename, "r", encoding='utf-8') as file:
+    with open(filename, "r", encoding="utf-8") as file:
         lines = file.readlines()
         farms = lines[0].strip().split(",")
         stores = lines[1].strip().split(",")
@@ -96,7 +96,7 @@ def write_output(max_cars, file_name):
         max_cars (int): The maximum number of cars
         file_name (str): The name of the output file
     """
-    with open(file_name, "w", encoding='utf-8') as file:
+    with open(file_name, "w", encoding="utf-8") as file:
         file.write(str(max_cars))
 
 

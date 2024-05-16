@@ -19,6 +19,3 @@ def check_gas_delivery(cities_list, storages_list, pipe_list):
     unreachable_cities = [city for city in cities_list if city not in visited]
 
     return unreachable_cities
-
-
-
