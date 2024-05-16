@@ -15,8 +15,8 @@ def longest_word_chain(words):
         current_word = words[i]
         for j in range(len(current_word)):
             new_word = current_word[:j] + current_word[j + 1 :]
-            if new_word in words:
-                index_of_new_word = words.index(new_word)
+            if new_word in words[i+1:]:
+                index_of_new_word = words.index(new_word, i+1)
                 max_chain_lengths[index_of_new_word] = max(
                     max_chain_lengths[index_of_new_word], max_chain_lengths[i] + 1
                 )
