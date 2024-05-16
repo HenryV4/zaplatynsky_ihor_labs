@@ -2,9 +2,6 @@
 Zaplatynsky Ihor ІР-13
 
 ##
-To work with tests you have to copy this repo in such a path
+To work with tests you have to run it from a cmd
 
-C:\projects\zaplatynsky_ihor_labs
-
-The tests are connected to this path and wont work in anothar way
-
+Navigate to the appropriate folder (..\projects\zaplatynsky_ihor_labs) and run pytest
