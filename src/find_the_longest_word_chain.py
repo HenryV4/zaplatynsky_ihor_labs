@@ -9,19 +9,17 @@ def longest_word_chain(words):
     """
     words.sort(key=lambda word: -len(word))
 
-    max_chain_lengths = [1] * len(words)
+    word_to_chain_length = {word: 1 for word in words}
 
-    for i in range(len(words)):
-        current_word = words[i]
+    for current_word in words:
         for j in range(len(current_word)):
-            new_word = current_word[:j] + current_word[j + 1 :]
-            if new_word in words[i+1:]:
-                index_of_new_word = words.index(new_word, i+1)
-                max_chain_lengths[index_of_new_word] = max(
-                    max_chain_lengths[index_of_new_word], max_chain_lengths[i] + 1
+            new_word = current_word[:j] + current_word[j + 1:]
+            if new_word in word_to_chain_length:
+                word_to_chain_length[new_word] = max(
+                    word_to_chain_length[new_word], word_to_chain_length[current_word] + 1
                 )
 
-    return max(max_chain_lengths)
+    return max(word_to_chain_length.values())
 
 
 def read_file(file_path):
